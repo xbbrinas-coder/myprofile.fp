@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xavier Bryan Briñas — Portfolio</title>
+    
+    <!-- Google Fonts: Montserrat (Headings) & Poppins (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryGreen: '#134e35',
+                        accentGreen: '#2ecc71',
+                        darkAccent: '#27ae60',
+                        borderGreen: 'rgba(46, 204, 113, 0.25)',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Glassmorphism Styles & Subtle Dark Grid Pattern -->
+    <style>
+        :root {
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #060907;
+            color: #e2e8f0;
+            background-image: 
+                linear-gradient(to right, rgba(46, 204, 113, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(46, 204, 113, 0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+        }
+
+        .glass-card {
+            background: rgba(12, 22, 17, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(46, 204, 113, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(46, 204, 113, 0.45);
+            box-shadow: 0 14px 40px rgba(46, 204, 113, 0.12);
+        }
+
+        .glow-effect {
+            position: relative;
+        }
+
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.4), transparent 60%);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="py-8 sm:py-12 px-4 sm:px-6 min-h-screen">
+
+    <!-- Main Grid Layout Container -->
+    <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- LEFT COLUMN: Profile Header & Info Sidebar -->
+        <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-8">
+            
+            <!-- Hero Card -->
+            <header class="glass-card glow-effect rounded-2xl p-8 sm:p-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accentGreen/10 border border-accentGreen/30 text-accentGreen font-heading font-semibold text-xs tracking-wider uppercase mb-6">
+                    Portfolio
+                </div>
+
+                <h1 class="font-heading font-black text-4xl sm:text-5xl text-white leading-[1.1] mb-4">
+                    Hi, I'm <br>
+                    <span class="text-accentGreen">Xavier Bryan</span> <br>
+                    Briñas
+                </h1>
+
+                <p class="text-slate-300 text-sm sm:text-base font-normal mb-8 leading-relaxed">
+                    First-year BAMS Student &amp; Digital Literacy Advocate
+                </p>
+
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=xbbrinas@up.edu.ph&tf=cm" 
+                   target="_blank" 
+                   class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-body font-semibold text-white bg-accentGreen hover:bg-darkAccent transition-all shadow-lg shadow-accentGreen/20 hover:shadow-accentGreen/40 hover:-translate-y-0.5">
+                   <i class="fa-solid fa-paper-plane text-sm"></i> Get in Touch
+                </a>
+            </header>
+
+            <!-- Things I Love Card -->
+            <section class="glass-card rounded-2xl p-8">
+                <h2 class="font-heading font-bold text-xl text-white border-b border-borderGreen pb-3 mb-5 flex items-center gap-3">
+                    <i class="fa-solid fa-heart text-accentGreen text-lg"></i>
+                    Things I Love
+                </h2>
+
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 text-slate-300 text-sm font-body">
+                        <span class="text-accentGreen mt-1 text-xs"><i class="fa-solid fa-circle"></i></span>
+                        <span>Listening to Laufey, Beabadoobee, and Taylor Swift</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-sm font-body">
+                        <span class="text-accentGreen mt-1 text-xs"><i class="fa-solid fa-circle"></i></span>
+                        <span>Watching Sitcoms</span>
+                    </li>
+                    <li class="flex items-start gap-3 text-slate-300 text-sm font-body">
+                        <span class="text-accentGreen mt-1 text-xs"><i class="fa-solid fa-circle"></i></span>
+                        <span>Vector illustration and learning motion graphics</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: About & Passion Projects -->
+        <div class="lg:col-span-7 space-y-6">
+
+            <!-- About Me Card -->
+            <section class="glass-card rounded-2xl p-8 sm:p-10">
+                <h2 class="font-heading font-bold text-2xl text-white border-b border-borderGreen pb-3 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-user-astronaut text-accentGreen text-xl"></i>
+                    About Me
+                </h2>
+
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                    <img src="images/profile-picture.webp" 
+                         alt="Profile Photo" 
+                         class="w-32 h-32 rounded-2xl object-cover border-2 border-accentGreen/50 shrink-0 shadow-lg shadow-accentGreen/10"
+                         onerror="this.onerror=null; this.src='https://placehold.co/140x140/134e35/ffffff?text=Xavier';">
+                    
+                    <p class="text-slate-300 leading-relaxed font-body text-sm sm:text-base text-center sm:text-left">
+                        Hi, I'm Sev! I'm a second-year multimedia studies student at the University of the Philippines Open University and a virtual assistant. I specialize in graphic design, video editing, and social media management. When I step away from my screen, I love exploring local cafés around and taking walks!
+                    </p>
+                </div>
+            </section>
+
+            <!-- Passion Projects Card -->
+            <section class="glass-card rounded-2xl p-8 sm:p-10">
+                <h2 class="font-heading font-bold text-2xl text-white border-b border-borderGreen pb-3 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-cubes text-accentGreen text-xl"></i>
+                    Passion Projects
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Project 1 -->
+                    <article class="bg-black/40 border border-borderGreen/60 rounded-xl p-5 hover:-translate-y-1.5 transition-all group">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="images/candle-making.webp" 
+                                 alt="Candles" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/134e35/bcead5?text=Soy+Wax+Tins';">
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-white group-hover:text-accentGreen transition-colors mb-2">
+                            Hand-Poured Soy Wax Tins
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            A hands-on experiment in small-batch candle making using seamless metal tins, natural soy wax, and custom scent blends.
+                        </p>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="bg-black/40 border border-borderGreen/60 rounded-xl p-5 hover:-translate-y-1.5 transition-all group">
+                        <div class="overflow-hidden rounded-lg mb-4 bg-slate-900/50">
+                            <img src="images/info-gfx.webp" 
+                                 alt="Infographic" 
+                                 class="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-300"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/134e35/bcead5?text=Infographic';">
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-white group-hover:text-accentGreen transition-colors mb-2">
+                            Creation of infographics
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Educational infographics breaking down topics like dense privacy policies and hidden consent clauses.
+                        </p>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="bg-black/40 border border-borderGreen/60 rounded-xl p-5 hover:-translate-y-1.5 transition-all group">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="images/the-frontman-1.webp" 
+                                 alt="The Frontman" 
+                                 class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/134e35/bcead5?text=Soy+Wax+Tins';">
+                        </div>
+                        <h3 class="font-heading font-bold text-base text-white group-hover:text-accentGreen transition-colors mb-2">
+                            The Frontman Branding
+                        </h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Rebrand of the frontman.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Contact Footer -->
+            <footer class="glass-card rounded-2xl p-8 text-center">
+                <h2 class="font-heading font-bold text-lg text-white mb-2">
+                    Contact
+                </h2>
+                <p class="text-slate-300 text-sm font-body">
+                    Feel free to reach out via email by clicking 
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&to=xbbrinas@up.edu.ph&tf=cm" 
+                       target="_blank" 
+                       class="text-accentGreen font-semibold underline hover:text-darkAccent transition-colors">
+                        here
+                    </a>.
+                </p>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- Cloudflare Analytics Beacon -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"759955a47e224fcdb2bbb6acd3293ead","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
